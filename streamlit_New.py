@@ -4,7 +4,7 @@ from PIL import Image
 import pandas as pd  # Import pandas library for data manipulation
 import numpy as np  # Import numpy library for numerical operations
 import streamlit as st  # Import streamlit for creating web applications
-from sqlalchemy import create_engine  # Import create_engine from SQLAlchemy for database connection
+  # Import create_engine from SQLAlchemy for database connection
 import joblib, pickle  # Import joblib and pickle for loading saved models
 from urllib.parse import quote
 # Load the logistic regression model and preprocessing objects
@@ -28,7 +28,6 @@ def predict_MPG(data, user, pw, db):
     """
 
     # Establish a database connection for storing predictions
-    engine = create_engine(f"mysql+pymysql://{user}:%s@localhost/{db}" % quote(f'{pw}'))
     
     # Remove the 'CASENUM' column as it's not used for prediction
     data = data.drop('CASENUM', axis=1)
