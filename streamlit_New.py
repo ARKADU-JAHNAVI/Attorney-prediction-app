@@ -5,7 +5,7 @@ import pandas as pd  # Import pandas library for data manipulation
 import numpy as np  # Import numpy library for numerical operations
 import streamlit as st  # Import streamlit for creating web applications
   # Import create_engine from SQLAlchemy for database connection
-import joblib, pickle  # Import joblib and pickle for loading saved models
+ # Import joblib and pickle for loading saved models
 from urllib.parse import quote
 # Load the logistic regression model and preprocessing objects
 model1 = pickle.load(open('logistic.pkl', 'rb'))  # Load the logistic regression model using pickle
